@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Visor y Filtro de Reportes</title>
+    <link rel="stylesheet" href="visor.css"> 
+    <style>
+        /* Estilos básicos para centrado */
+        body { font-family: Arial, sans-serif; padding: 20px; background-color: #f4f7f6; }
+        #visor-container { max-width: 1200px; margin: 0 auto; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        #controles-filtro { display: flex; gap: 20px; margin-bottom: 20px; align-items: flex-end; }
+        #lista-archivos { height: 70vh; overflow-y: auto; border: 1px solid #ccc; padding: 10px; border-radius: 5px; }
+        .archivo-item { padding: 10px; margin-bottom: 5px; background: #eee; border-radius: 4px; cursor: pointer; }
+        .archivo-item:hover { background: #ddd; }
+        .archivo-item.activo { background: #007bff; color: white; font-weight: bold; }
+        #visor-pdf-area { flex-grow: 1; height: 70vh; border: 1px solid #007bff; }
+    </style>
+</head>
+<body>
+
+    <div id="visor-container">
+        <h1>Visor de Reportes Mensuales DOJOPETS</h1>
+
+        <div id="controles-filtro">
+            <div style="flex-grow: 1;">
+                <label>Reportes cargados</label>
+                </div>
+            
+            <div style="width: 300px;">
+                <label for="input-filtro">Filtrar por Mes/Año (Ej: Noviembre 2025):</label>
+                <input type="text" id="input-filtro" placeholder="Escribe el mes o año..." style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+            </div>
+        </div>
+        
+        <div style="display: flex; gap: 20px;">
+            
+            <div id="lista-archivos-contenedor" style="width: 300px;">
+                <h3>Archivos Disponibles:</h3>
+                <div id="lista-archivos">
+                    <p style="color: #666;">Cargando listado...</p>
+                    </div>
+            </div>
+
+            <div id="visor-pdf-area">
+                <iframe id="visor-pdf" style="width: 100%; height: 100%; border: none;" src=""></iframe>
+                <p id="mensaje-visor" style="text-align: center; margin-top: 10px;">Selecciona un reporte de la lista para visualizar.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="listado_reportes.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
