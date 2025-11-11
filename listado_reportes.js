@@ -9,16 +9,16 @@ const LISTA_REPORTES = [
     // EJEMPLO DE ESTANCIA (Tickets)
     { 
         type: "Estancia", 
-        name: "Estancia Canina Noviembre 2025", 
-        month: 11, year: 2024,
-        path: "./reportes/Balance del mes de noviembre 2024 - DOJOPETS.pdf" 
+        name: "Estancia Canina Mayo 2024", 
+        month: 05, year: 2024,
+        path: "./reportes/Balance del mes de mayo 2024 - DOJOPETS.pdf" 
     },
 
     { 
         type: "Estancia", 
-        name: "Estancia Canina Diciembre 2025", 
-        month: 12, year: 2024,
-        path: "./reportes/Balance del mes de diciembre 2024 - DOJOPETS.pdf" 
+        name: "Estancia Canina Julio 2024", 
+        month: 07, year: 2024,
+        path: "./reportes/Balance del mes de julio 2024 - DOJOPETS.pdf" 
     },
     // Añade más reportes aquí...
 ];
